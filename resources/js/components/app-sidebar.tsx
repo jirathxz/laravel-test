@@ -5,6 +5,7 @@ import {
     Store,
     ShoppingCart,
     Package,
+    Wrench,
 } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import { NavFooter } from '@/components/nav-footer';
@@ -42,6 +43,11 @@ export function AppSidebar() {
             title: 'ร้านค้า (Shop)',
             href: '/shop',
             icon: Store,
+        },
+        {
+            title: 'แจ้งซ่อม (Repair)',
+            href: '/repairs',
+            icon: Wrench,
         },
         {
             title: 'ตะกร้าสินค้า (Cart)',

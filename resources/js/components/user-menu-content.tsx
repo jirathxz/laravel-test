@@ -1,5 +1,5 @@
 import { Link, router } from '@inertiajs/react';
-import { LogOut, Package, Settings } from 'lucide-react';
+import { LogOut, Package, Settings, Wrench } from 'lucide-react';
 import {
     DropdownMenuGroup,
     DropdownMenuItem,
@@ -42,6 +42,17 @@ export function UserMenuContent({ user }: Props) {
                     >
                         <Package className="mr-2 size-4" />
                         คำสั่งซื้อของฉัน
+                    </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                    <Link
+                        className="block w-full cursor-pointer flex items-center"
+                        href="/repairs"
+                        prefetch
+                        onClick={cleanup}
+                    >
+                        <Wrench className="mr-2 size-4" />
+                        ประวัติการแจ้งซ่อม
                     </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>

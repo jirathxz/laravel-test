@@ -82,3 +82,33 @@ export interface PaginatedData<T> {
         active: boolean;
     }[];
 }
+
+export interface RepairTicket {
+    id: number;
+    ticket_number: string;
+    user_id: number | null;
+    device_type: 'desktop' | 'notebook' | 'macbook' | 'component' | 'software' | 'other';
+    device_brand: string;
+    device_model: string;
+    serial_number: string | null;
+    service_type: 'drop_off' | 'pickup';
+    problem_description: string;
+    symptoms: string[] | null;
+    urgency: 'normal' | 'urgent';
+    customer_name: string;
+    customer_phone: string;
+    customer_email: string;
+    customer_address: string | null;
+    status: 'pending' | 'inspecting' | 'in_progress' | 'waiting_parts' | 'completed' | 'cancelled';
+    estimated_cost: number | null;
+    technician_notes: string | null;
+    completed_at: string | null;
+    created_at: string;
+    updated_at?: string;
+    user?: {
+        id: number;
+        name: string;
+        email: string;
+    };
+}
+

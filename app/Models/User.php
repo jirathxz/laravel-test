@@ -63,4 +63,12 @@ class User extends Authenticatable implements PasskeyUser
     {
         return $this->hasMany(CartItem::class);
     }
+
+    /**
+     * @return HasMany<RepairTicket, $this>
+     */
+    public function repairTickets(): HasMany
+    {
+        return $this->hasMany(RepairTicket::class);
+    }
 }
